@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Prueba de Ingreso</string>
+    <string name="description">Descripción</string>
+    <string name="user">Usuario</string>
+    <string name="comments">Comentarios</string>
+    <string name="search_user">Buscar usuario</string>
+    <string name="see_posts">Ver publicaciones</string>
+</resources>

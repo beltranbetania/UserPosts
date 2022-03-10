@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/general_vertical_margin"
+    android:layout_marginTop="@dimen/general_vertical_margin">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/general_vertical_margin"
+    android:paddingLeft="@dimen/general_horizontal_margin"
+    android:paddingRight="@dimen/general_horizontal_margin"
+    android:paddingTop="@dimen/general_vertical_margin">
+
+    <TextView
+        android:id="@+id/nameTV"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:text="Joe"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/phoneIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:tint="@color/green"
+        android:src="@drawable/ic_phone_black"
+        app:layout_constraintTop_toBottomOf="@id/nameTV"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+         />
+
+    <TextView
+        android:id="@+id/phoneTV"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nameTV"
+        app:layout_constraintLeft_toRightOf="@id/phoneIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/phoneIV"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="0000000" />
+
+    <ImageView
+        android:id="@+id/emailIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:tint="@color/green"
+        android:src="@drawable/ic_email_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneIV"
+        />
+
+    <TextView
+        android:id="@+id/emailTV"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/emailIV"
+        app:layout_constraintLeft_toRightOf="@id/emailIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/emailIV"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="0000000" />
+
+    <Button
+        android:id="@+id/btn_view_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/see_posts"
+        android:textColor="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/emailTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
