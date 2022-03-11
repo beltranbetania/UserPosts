@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
+    android:background="@color/whiteTwo"
+    android:paddingTop="@dimen/general_vertical_margin"
+    android:paddingHorizontal="@dimen/general_horizontal_margin"
     tools:context=".presentation.userDetail.UserDetailFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -66,6 +69,7 @@
                         />
 
                     <TextView
+                        android:layout_marginLeft="@dimen/secondary_horizontal_margin"
                         android:id="@+id/phoneTV"
                         style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="0dp"
@@ -91,6 +95,7 @@
                         app:tint="@color/green" />
 
                     <TextView
+                        android:layout_marginLeft="@dimen/secondary_horizontal_margin"
                         android:id="@+id/emailTV"
                         style="@style/TextAppearance.AppCompat.Body1"
                         android:layout_width="0dp"
@@ -112,6 +117,7 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/green_dark"
                 android:text="@string/posts_list" />
 
 

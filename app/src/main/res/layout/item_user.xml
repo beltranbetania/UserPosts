@@ -41,6 +41,7 @@
          />
 
     <TextView
+        android:layout_marginLeft="@dimen/secondary_horizontal_margin"
         android:id="@+id/phoneTV"
         style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="0dp"
@@ -67,6 +68,7 @@
         />
 
     <TextView
+        android:layout_marginLeft="@dimen/secondary_horizontal_margin"
         android:id="@+id/emailTV"
         style="@style/TextAppearance.AppCompat.Body1"
         android:layout_width="0dp"

@@ -2,9 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/whiteTwo"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/general_horizontal_margin"
+    android:paddingTop="@dimen/general_vertical_margin"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.users.UsersFragment">
 
@@ -32,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/search_user"
+            android:background="@color/whiteTwo"
 
              />
 
@@ -48,6 +52,7 @@
         android:layout_height="0dp">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="@dimen/general_vertical_margin"
             android:id="@+id/itemsContainerRV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
