@@ -13,17 +13,22 @@ import javax.inject.Inject
 class UsersViewModel @Inject constructor(
     private val getUsersUseCase: GetUsersUseCase
 ) : ViewModel() {
+
     val userModel = MutableLiveData<List<User>>()
     val isLoading = MutableLiveData<Boolean>()
+    val isEmpty = MutableLiveData<Boolean>()
 
-    fun loadPosts() {
+    fun loadUsers() {
         viewModelScope.launch {
             isLoading.postValue(true)
             val result = getUsersUseCase()
             if (!result.isNullOrEmpty()) {
+                isEmpty.postValue(false)
                 userModel.postValue(result)
-                isLoading.postValue(false)
+            }else{
+                isEmpty.postValue(true)
             }
+            isLoading.postValue(false)
         }
     }
 

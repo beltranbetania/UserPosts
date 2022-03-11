@@ -31,8 +31,8 @@ class PostAdapter() :
 
     class ViewHolder (val binding: ItemPostBinding) : RecyclerView.ViewHolder(binding.root)  {
         fun bind(item:Post){
-            binding.postTitleTV.text=item.title
-
+            binding.titleTV.text=item.title
+            binding.contentTV.text=item.body
         }
     }
 

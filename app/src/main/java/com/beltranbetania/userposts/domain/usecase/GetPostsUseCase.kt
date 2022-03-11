@@ -7,11 +7,11 @@ import javax.inject.Inject
 
 class GetPostsUseCase @Inject constructor(private val repository: UserDetailRepository) {
     suspend operator fun invoke(userId: Int):List<Post>{
-        var users = repository.getPostsFromDatabase(userId)
-        if (users.isEmpty()){
-            users=  repository.getPostsFromApi(userId)
-            repository.insertPosts(users.map { it.toDatabase() })
+        var posts = repository.getPostsFromDatabase(userId)
+        if (posts.isEmpty()){
+            posts=  repository.getPostsFromApi(userId)
+            repository.insertPosts(posts.map { it.toDatabase() })
         }
-        return users
+        return posts
     }
 }

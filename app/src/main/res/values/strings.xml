@@ -5,4 +5,6 @@
     <string name="comments">Comentarios</string>
     <string name="search_user">Buscar usuario</string>
     <string name="see_posts">Ver publicaciones</string>
+    <string name="posts_list">Lista de publicaciones</string>
+    <string name="list_is_empty">List is empty</string>
 </resources>

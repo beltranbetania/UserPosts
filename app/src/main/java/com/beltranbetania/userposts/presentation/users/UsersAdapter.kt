@@ -10,8 +10,8 @@ class UsersAdapter(val listener: onItemClickListener) :
     RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
 
     var data = mutableListOf<User>()
-    fun setUserList(movies: List<User>) {
-        this.data = movies.toMutableList()
+    fun setUserList(userList: List<User>) {
+        this.data = userList.toMutableList()
         notifyDataSetChanged()
     }
 
@@ -32,8 +32,10 @@ class UsersAdapter(val listener: onItemClickListener) :
 
     class ViewHolder (val binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root)  {
         fun bind(item: User, listener: onItemClickListener){
-            //binding.UserTitleTV.text=item.title
-            binding.root.setOnClickListener{
+            binding.nameTV.text=item.name
+            binding.phoneTV.text=item.phone
+            binding.emailTV.text=item.email
+            binding.btnViewPost.setOnClickListener{
                 listener.itemClick(item)
 
             }
