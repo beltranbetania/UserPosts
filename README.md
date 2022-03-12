@@ -1,9 +1,10 @@
-# Post Json
+# User Posts
 ## About
 On this repository you will find a Project with Clean Architecture, MVVM, Retrofit, Coroutines, Dagger Hilt, which:
 * Show a list of all users and their details (user & post) from JSONPlaceholder. 
 * filter users by name
-* Implement unit testing for use a case, view model and and a fucntional test for searching user
+* Implement unit testing for use a case and view model
+* Implement unit testing for searching user
 
 ### Requirements
 * Android Studio (latest version)
