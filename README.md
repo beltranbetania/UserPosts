@@ -1,14 +1,12 @@
 # Post Json
 ## About
 On this repository you will find a Project with Clean Architecture, MVVM, Retrofit, Coroutines, Dagger Hilt, which:
-* Show a list of all posts and their details (user & comments) from JSONPlaceholder. 
-* Allows save posts as favorite
-* Show a list of all favorite posts 
-* Allows delete all post from the list, or just one with swipe gesture on item
-* Implement unit testing for a use case
+* Show a list of all users and their details (user & post) from JSONPlaceholder. 
+* filter users by name
+* Implement unit testing for use a case, view model and and a fucntional test for searching user
 
 ### Requirements
-* Android Studio 2 v3.0.1 or higher
+* Android Studio (latest version)
 * Java 8
 * Gradle v4.1.3
 
