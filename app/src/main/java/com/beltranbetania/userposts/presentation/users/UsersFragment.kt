@@ -50,10 +50,7 @@ class UsersFragment : Fragment(), UsersAdapter.onItemClickListener, TextWatcher 
         })
 
         postViewModel.isEmpty.observe(viewLifecycleOwner, Observer {
-            binding.swipeTv.visibility  =  when(it) {
-                true -> TextView.VISIBLE
-                false -> TextView.INVISIBLE
-            }
+            setMessageVisivility(it)
         })
 
         postViewModel.loadUsers()
@@ -89,7 +86,15 @@ class UsersFragment : Fragment(), UsersAdapter.onItemClickListener, TextWatcher 
                 usersFiltered.add(user)
             }
         }
+        setMessageVisivility(usersFiltered.isEmpty())
         mAdapter.setUserList(usersFiltered)
+    }
+
+    private fun setMessageVisivility(flag:Boolean){
+        binding.swipeTv.visibility  =  when(flag) {
+            true -> TextView.VISIBLE
+            false -> TextView.INVISIBLE
+        }
     }
 
     override fun afterTextChanged(p0: Editable?) {
